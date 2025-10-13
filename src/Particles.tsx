@@ -78,24 +78,28 @@ const vertex = /* glsl */ `
 
 const fragment = /* glsl */ `
   precision highp float;
-  
+
   uniform float uTime;
   uniform float uAlphaParticles;
   varying vec4 vRandom;
   varying vec3 vColor;
-  
+
+  // WebGL1-safe anti-aliased circle using smoothstep (no derivatives)
   void main() {
     vec2 uv = gl_PointCoord.xy;
     float d = length(uv - vec2(0.5));
-    
-    if(uAlphaParticles < 0.5) {
-      if(d > 0.5) {
+
+    float radius = 0.5;
+    float smoothing = 0.02; // in point coord units; small constant for AA
+    float alpha = 1.0 - smoothstep(radius - smoothing, radius + smoothing, d);
+
+    if (uAlphaParticles < 0.5) {
+      if (alpha < 0.01) {
         discard;
       }
       gl_FragColor = vec4(vColor + 0.2 * sin(uv.yxx + uTime + vRandom.y * 6.28), 1.0);
     } else {
-      float circle = smoothstep(0.5, 0.4, d) * 0.8;
-      gl_FragColor = vec4(vColor + 0.2 * sin(uv.yxx + uTime + vRandom.y * 6.28), circle);
+      gl_FragColor = vec4(vColor + 0.2 * sin(uv.yxx + uTime + vRandom.y * 6.28), alpha);
     }
   }
 `;
@@ -108,7 +112,7 @@ const Particles: React.FC<ParticlesProps> = ({
   moveParticlesOnHover = false,
   particleHoverFactor = 1,
   alphaParticles = false,
-  particleBaseSize = 100,
+  particleBaseSize = 24,
   sizeRandomness = 1,
   cameraDistance = 20,
   disableRotation = false,
@@ -161,11 +165,20 @@ const Particles: React.FC<ParticlesProps> = ({
     camera.position.set(0, 0, cameraDistance);
 
     const resize = () => {
-      // Use the container's computed size to properly size the renderer
-      const width = container.clientWidth || canvas.clientWidth || window.innerWidth;
-      const height = container.clientHeight || canvas.clientHeight || window.innerHeight;
-      renderer.setSize(width, height);
-      camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
+      // Use the container's computed size and devicePixelRatio to size the canvas
+      const cssWidth = container.clientWidth || canvas.clientWidth || window.innerWidth;
+      const cssHeight = container.clientHeight || canvas.clientHeight || window.innerHeight;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2); // cap DPR to 2 for performance
+
+      // set renderer drawing buffer size to DPR-scaled pixels, but keep CSS size at 100%
+      // ogl's Renderer.setSize accepts pixel size; multiply by DPR for crispness
+      renderer.setSize(Math.max(1, Math.floor(cssWidth * dpr)), Math.max(1, Math.floor(cssHeight * dpr)));
+
+      // ensure canvas CSS size remains the CSS pixel size (so it fills the container)
+      canvas.style.width = cssWidth + 'px';
+      canvas.style.height = cssHeight + 'px';
+
+      camera.perspective({ aspect: (cssWidth * dpr) / (cssHeight * dpr) });
     };
     window.addEventListener('resize', resize, false);
     resize();
