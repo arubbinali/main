@@ -1,19 +1,27 @@
 import './App.css';
-import Particles from './components/background';
+import LightRays from './components/background';
 
 function App() {
   return (
-    <div className="App">
-      <Particles
-        particleColors={['#ffffff', '#00aaff', '#66ccff']}
-        particleCount={300}
-        particleSpread={10}
-        speed={0.15}
-        particleBaseSize={120}
-        moveParticlesOnHover={true}
-        alphaParticles={false}
-        disableRotation={false}
-      />
+    <div className="App" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Light Rays Background */}
+      <LightRays
+  raysOrigin="bottom-center"
+  raysColor="#ffffff"
+  raysSpeed={1.5}
+  lightSpread={0.8}
+  rayLength={1.2}
+  followMouse={true}
+  mouseInfluence={0.1}
+  noiseAmount={0.1}
+  distortion={0.0}
+  className="custom-rays"
+  style={{ zIndex: 1 }} // 👈 stays below
+/>
+
+
+
+
     </div>
   );
 }
