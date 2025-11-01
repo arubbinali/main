@@ -3,6 +3,7 @@ import { Renderer, Camera, Geometry, Program, Mesh } from 'ogl';
 
 import './background.css';
 
+
 const defaultColors = ['#ffffff', '#ffffff', '#ffffff'];
 
 const hexToRgb = hex => {
