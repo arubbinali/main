@@ -49,7 +49,7 @@ function Main() {
 
         <p>
           <a
-            href="./about"
+            href="/about"
             rel="noopener noreferrer"
             className="temp-link"
           >
