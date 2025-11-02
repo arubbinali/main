@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
+import ShinyText from "../components/ShinyText"; // ✅ import animation
 
 function About() {
   const [showContent, setShowContent] = useState(false);
@@ -16,10 +17,10 @@ function About() {
         minHeight: "100vh",
       }}
     >
-      {/* ✅ Intro animation (same as main page) */}
+      {/* ✅ Intro animation */}
       {!showContent && <IntroAnimation onFinish={() => setShowContent(true)} />}
 
-      {/* ✅ About content appears after intro */}
+      {/* ✅ About content */}
       <div
         className={`about-content ${showContent ? "fade-in" : "hidden"}`}
         style={{
@@ -46,13 +47,17 @@ function About() {
 
         {/* Centered Text */}
         <div className="center-text" style={{ zIndex: 2 }}>
-          <h1>About This Site</h1>
-          <p>This page will soon include details about me and my work.</p>
+          <h1>
+            <ShinyText text="About This Site" speed={4} />
+          </h1>
+          <p>
+            <ShinyText text="This page will soon include details about me and my work." speed={5} />
+          </p>
 
           <p>
             Back to{" "}
             <a href="/main/#/main" rel="noopener noreferrer" className="temp-link">
-              Main
+              <ShinyText text="Main" speed={4} />
             </a>
           </p>
         </div>
