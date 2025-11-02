@@ -61,7 +61,7 @@ function Main() {
           </p>
 
           <p>
-            <a href="/about" rel="noopener noreferrer" className="temp-link">
+            <a href="/main/#/about" rel="noopener noreferrer" className="temp-link">
               About
             </a>
           </p>

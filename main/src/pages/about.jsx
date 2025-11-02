@@ -51,7 +51,7 @@ function About() {
 
           <p>
             Back to{" "}
-            <a href="/main" rel="noopener noreferrer" className="temp-link">
+            <a href="/main/#/main" rel="noopener noreferrer" className="temp-link">
               Main
             </a>
           </p>
