@@ -39,7 +39,7 @@ function Main() {
             followMouse={true}
             mouseInfluence={0.1}
             noiseAmount={0.1}
-            distortion={0.0}
+            distortion={0.01}
             className="custom-rays"
           />
         </div>
