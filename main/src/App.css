@@ -43,3 +43,22 @@
   text-decoration: underline;
   text-decoration-color: green;
 }
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeInSmooth 2s ease forwards;
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
