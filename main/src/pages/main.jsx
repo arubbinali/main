@@ -48,8 +48,12 @@ function Main() {
         {/* Centered Text */}
         <div className="center-text" style={{ zIndex: 2 }}>
           <h1>
-            <ShinyText text="Welcome to My New Page, It's still in the making" speed={4} />
+            <ShinyText
+              text="Welcome to My New Page, It's still in the making"
+              speed={4}
+            />
           </h1>
+
           <p>
             You can find my current site{" "}
             <a
@@ -57,17 +61,23 @@ function Main() {
               target="_blank"
               rel="noopener noreferrer"
               className="temp-link"
-              style={{ color: "pink" }}
+              style={{ color: "grey" }}
             >
               here
             </a>
           </p>
 
           <p>
-            <a href="/main/#/about" rel="noopener noreferrer" className="temp-link">
-              <ShinyText text="About" speed={4} />
-            </a>
+            <a
+              href="/main/#/about"
+              rel="noopener noreferrer"
+              className="temp-link"
+              style={{ color: "grey" }}
+            >
+              About
+            </a> {" "} this website
           </p>
+
         </div>
       </div>
     </div>

@@ -32,16 +32,16 @@
 }
 
 .temp-link {
-  color: rgb(0, 213, 251);
+  color: rgb(75, 89, 244);
   text-decoration: none;
   position: relative;
-  transition: text-decoration-color 0.3s ease;
+  transition: text-decoration-color 0.6s ease;
   text-decoration-color: transparent;
 }
 
 .temp-link:hover {
   text-decoration: underline;
-  text-decoration-color: green;
+  text-decoration-color: rgb(217, 210, 210);
 }
 
 .hidden {
