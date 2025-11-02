@@ -29,10 +29,10 @@ const IntroAnimation = ({ onFinish }) => {
       <div className="intro-text">
         <span>A</span>
         <span>R</span>
-        <span>Ü</span>
+        <span>U</span>
         <span>B</span>
       </div>
-      <div className="intro-subtext">skrrr</div>
+      <div className="intro-subtext">linuxed</div>
 
       <audio autoPlay loop>
         <source src="/Mark.mp3" type="audio/mpeg" />
