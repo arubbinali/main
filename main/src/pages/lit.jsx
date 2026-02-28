@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+    import React, { useState } from "react";
 import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
