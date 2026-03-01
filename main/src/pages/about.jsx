@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
@@ -56,9 +57,9 @@ function About() {
 
           <p>
             Back to{" "}
-            <a href="/main/#/main" rel="noopener noreferrer" className="temp-link">
+            <Link to="/main" className="temp-link">
               <ShinyText text="Main" speed={4} />
-            </a>
+            </Link>
           </p>
         </div>
       </div>

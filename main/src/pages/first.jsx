@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GridScan from '../components/GridScan';
 
 function First() {
@@ -44,8 +45,8 @@ function First() {
         <h1>First Page</h1>
         <p>Welcome to the grid.</p>
         <nav>
-          <a href="/main/#/main" style={{ color: '#FF9FFC', marginRight: '1rem' }}>Main</a>
-          <a href="/main/#/about" style={{ color: '#FF9FFC' }}>About</a>
+          <Link to="/main" style={{ color: '#FF9FFC', marginRight: '1rem' }}>Main</Link>
+          <Link to="/about" style={{ color: '#FF9FFC' }}>About</Link>
         </nav>
       </div>
     </div>

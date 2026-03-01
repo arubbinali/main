@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
@@ -68,14 +69,9 @@ function Main() {
           </p>
 
           <p>
-            <a
-              href="/main/#/about"
-              rel="noopener noreferrer"
-              className="temp-link"
-              style={{ color: "grey" }}
-            >
+            <Link to="/about" className="temp-link" style={{ color: "grey" }}>
               About
-            </a> {" "} this website
+            </Link>{" "} this website
           </p>
 
         </div>
