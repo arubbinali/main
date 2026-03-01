@@ -5,6 +5,7 @@ const IntroAnimation = ({ onFinish }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    // animation delays for letters
     const letters = document.querySelectorAll(".intro-text span");
     letters.forEach((letter, index) => {
       letter.style.animationDelay = `${index * 0.3}s`;

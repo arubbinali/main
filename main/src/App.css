@@ -6,6 +6,12 @@
   background-color: #000; /* or any background you want */
 }
 
+/* smooth scrolling throughout the site */
+/* Lenis handles smooth scrolling; disable native behavior */
+html {
+  scroll-behavior: auto;
+}
+
 .center-text {
   position: absolute;
   top: 50%;
