@@ -55,7 +55,7 @@ function Lit() {
           </h1>
 
           <p>
-            This is your new lit page
+            This is your new lit page.
           </p>
         </div>
       </div>
