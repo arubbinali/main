@@ -50,6 +50,19 @@ html {
   text-decoration-color: rgb(217, 210, 210);
 }
 
+.dont-click-link {
+  color: grey;
+  text-decoration: none;
+  position: relative;
+  transition: text-decoration-color 0.6s ease;
+  text-decoration-color: transparent;
+}
+
+.dont-click-link:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
 .hidden {
   opacity: 0;
   pointer-events: none;
@@ -67,4 +80,16 @@ html {
   to {
     opacity: 1;
   }
+}
+
+
+.no-scroll-page {
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.no-scroll-page::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
 }

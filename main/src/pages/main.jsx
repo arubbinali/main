@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
-import ShinyText from "../components/ShinyText"; // ✅ import animation
+import ShinyText from "../components/ShinyText";
+import FuzzyText from "../components/FuzzyText";
+
 
 function Main() {
   const [showContent, setShowContent] = useState(false);
@@ -72,6 +74,23 @@ function Main() {
             <Link to="/about" className="temp-link" style={{ color: "grey" }}>
               About
             </Link>{" "} this website
+          </p>
+
+          
+          <p>
+            
+            <Link to="/404" className="dont-click-link">
+              <FuzzyText
+                fontSize="20px"
+                fontWeight = "300"
+                baseIntensity={0.1}
+                hoverIntensity={0.2}
+                enableHover
+              >
+                do not click
+              </FuzzyText>
+            </Link>
+
           </p>
 
         </div>
