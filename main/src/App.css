@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .App {
   position: relative;
   width: 100%;
@@ -10,6 +13,10 @@
 /* Lenis handles smooth scrolling; disable native behavior */
 html {
   scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 .center-text {
