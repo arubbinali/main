@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Main from "./pages/main";
 import About from "./pages/about";
-import First from "./pages/first";
 import Page404 from "./pages/404";
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/main" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/first" element={<First />} />
         <Route path="/404" element={<Page404 />} />
         {/* fallback: show 404 for truly unknown routes */}
         <Route path="*" element={<Page404 />} />
