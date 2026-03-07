@@ -4,7 +4,6 @@ import Lenis from "lenis";
 import Main from "./pages/main";
 import About from "./pages/about";
 import First from "./pages/first";
-import Lit from "./pages/lit";
 import Page404 from "./pages/404";
 
 function App() {
@@ -35,9 +34,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Redirect root to lit page */}
-        <Route path="/" element={<Navigate to="/lit" replace />} />
-        <Route path="/lit" element={<Lit />} />
+        {/* root route goes to main page */}
+        <Route path="/" element={<Main />} />
         <Route path="/main" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/first" element={<First />} />
