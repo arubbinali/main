@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Main from "./pages/main";
 import About from "./pages/about";
-import Page404 from "./pages/404";
+import Why from "./pages/why";
 
 function App() {
   useEffect(() => {
@@ -37,9 +37,9 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/main" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/404" element={<Page404 />} />
-        {/* fallback: show 404 for truly unknown routes */}
-        <Route path="*" element={<Page404 />} />
+        <Route path="/why" element={<Why />} />
+        {/* fallback: unknown routes go to main page */}
+        <Route path="*" element={<Main />} />
       </Routes>
     </Router>
   );

@@ -5,7 +5,7 @@ import IntroAnimation from "../components/intro";
 import FuzzyText from "../components/FuzzyText";
 import ScrollReveal from "../components/ScrollReveal";
 
-function Page404() {
+function Why() {
   const [showContent, setShowContent] = useState(false);
 
   return (
@@ -95,4 +95,4 @@ function Page404() {
   );
 }
 
-export default Page404;
+export default Why;

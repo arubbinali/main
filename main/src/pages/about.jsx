@@ -57,7 +57,7 @@ function About() {
 
           <p>
             Back to{" "}
-            <Link to="/main" className="temp-link">
+            <Link to="/" className="temp-link">
               <ShinyText text="Main" speed={4} />
             </Link>
           </p>

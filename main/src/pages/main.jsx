@@ -79,7 +79,7 @@ function Main() {
           
           <p>
             
-            <Link to="/404" className="dont-click-link">
+            <Link to="/why" className="dont-click-link">
               <FuzzyText
                 fontSize="20px"
                 fontWeight = "300"
