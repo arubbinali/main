@@ -60,7 +60,7 @@ function Main() {
           <p>
             You can find my current site{" "}
             <a
-              href="https://arubbinali.github.io/"
+              href="https://arubbinali.github.io/d/"
               target="_blank"
               rel="noopener noreferrer"
               className="temp-link"
