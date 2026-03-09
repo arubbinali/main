@@ -49,7 +49,10 @@ function Main() {
         </div>
 
         {/* Centered Text */}
-        <div className="center-text" style={{ zIndex: 2 }}>
+        <div
+          className="center-text"
+          style={{ zIndex: 2, fontFamily: "Montserrat, sans-serif" }}
+        >
           <h1>
             <ShinyText
               text="Welcome to My New Page, It's still in the making"
@@ -58,7 +61,7 @@ function Main() {
           </h1>
 
           <p>
-            You can find my current site{" "}
+            You can find my digital portfolio{" "}
             <a
               href="https://arubbinali.github.io/d/"
               target="_blank"
@@ -82,7 +85,8 @@ function Main() {
             <Link to="/why" className="dont-click-link">
               <FuzzyText
                 fontSize="20px"
-                fontWeight = "300"
+                fontWeight={100}
+                fontFamily="Montserrat, sans-serif"
                 baseIntensity={0.1}
                 hoverIntensity={0.2}
                 enableHover

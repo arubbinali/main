@@ -33,7 +33,7 @@ const IntroAnimation = ({ onFinish }) => {
         <span>U</span>
         <span>B</span>
       </div>
-      <div className="intro-subtext">linuxed</div>
+      <div className="intro-subtext">حياك الله، نورتنا</div>
 
       <audio autoPlay loop>
         <source src="/Mark.mp3" type="audio/mpeg" />
