@@ -52,7 +52,7 @@ function About() {
             <ShinyText text="About This Site" speed={4} />
           </h1>
           <p>
-            <ShinyText text="This page will soon include details about me and my work." speed={5} />
+            <ShinyText text="This website will soon feature additional content currently in development." speed={5} />
           </p>
 
           <p>

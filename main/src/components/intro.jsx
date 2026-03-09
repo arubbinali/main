@@ -28,12 +28,12 @@ const IntroAnimation = ({ onFinish }) => {
   return (
     <div className={`intro-container ${fadeOut ? "fade-out" : ""}`}>
       <div className="intro-text">
-        <span>A</span>
-        <span>R</span>
-        <span>U</span>
-        <span>B</span>
+        <span>W</span>
+        <span>H</span>
+        <span>Y</span>
+        <span>?</span>
       </div>
-      <div className="intro-subtext">حياك الله، نورتنا</div>
+      <div className="intro-subtext">arub</div>
 
       <audio autoPlay loop>
         <source src="/Mark.mp3" type="audio/mpeg" />
