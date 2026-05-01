@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
 import ShinyText from "../components/ShinyText";
@@ -20,6 +19,25 @@ function Main() {
         minHeight: "100vh",
       }}
     >
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: 0,
+        }}
+      >
+        <source src="/videos/ograys.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       {/* ✅ Intro animation */}
       {!showContent && <IntroAnimation onFinish={() => setShowContent(true)} />}
 
@@ -32,21 +50,6 @@ function Main() {
           height: "100%",
         }}
       >
-        {/* Light Rays Background */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 1 }}>
-          <LightRays
-            raysOrigin="bottom-center"
-            raysColor="#ffffff"
-            raysSpeed={1.5}
-            lightSpread={window.innerWidth < 1000 ? 9999 : 0.8}
-            rayLength={window.innerWidth < 1000 ? 9999 : 3}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0.1}
-            distortion={0.01}
-            className="custom-rays"
-          />
-        </div>
 
         {/* Centered Text */}
         <div

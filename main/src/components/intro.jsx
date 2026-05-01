@@ -12,8 +12,8 @@ const IntroAnimation = ({ onFinish }) => {
     });
 
     // Play animation fully, then fade out
-    const showTime = 3200; // how long the animation shows before fade out
-    const fadeDuration = 1200; // fade-out duration
+    const showTime = 3500; // how long the animation shows before fade out
+    const fadeDuration = 1000; // fade-out duration
     const totalTime = showTime + fadeDuration;
 
     const fadeTimer = setTimeout(() => setFadeOut(true), showTime);
@@ -28,10 +28,10 @@ const IntroAnimation = ({ onFinish }) => {
   return (
     <div className={`intro-container ${fadeOut ? "fade-out" : ""}`}>
       <div className="intro-text">
-        <span>W</span>
-        <span>H</span>
-        <span>Y</span>
-        <span>?</span>
+        <span>f</span>
+        <span>l</span>
+        <span>o</span>
+        <span>w</span>
       </div>
       <div className="intro-subtext">arub</div>
 

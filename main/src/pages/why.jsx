@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import LightRays from "../components/background";
 import "../App.css";
 import IntroAnimation from "../components/intro";
 import FuzzyText from "../components/FuzzyText";
@@ -19,21 +18,24 @@ function Why() {
         minHeight: "100vh",
       }}
     >
-      {/* fixed background */}
-      <div style={{ position: "fixed", inset: 0, zIndex: 0 }}>
-        <LightRays
-          raysOrigin="bottom-center"
-          raysColor="#ffffff"
-          raysSpeed={1.5}
-          lightSpread={window.innerWidth < 1000 ? 9999 : 0.8}
-          rayLength={window.innerWidth < 1000 ? 9999 : 3}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.01}
-          className="custom-rays"
-        />
-      </div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: 0,
+        }}
+      >
+        <source src="/videos/ograys.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* content wrapper sits above fixed background */}
       <div style={{ position: "relative", zIndex: 1 }}>

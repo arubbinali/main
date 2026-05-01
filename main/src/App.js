@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import Main from "./pages/main";
 import About from "./pages/about";
 import Why from "./pages/why";
+import Resume from "./pages/resume";
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/why" element={<Why />} />
+        <Route path="/resume" element={<Resume />} />
         {/* fallback: unknown routes go to main page */}
         <Route path="*" element={<Main />} />
       </Routes>
